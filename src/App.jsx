@@ -1,5 +1,5 @@
+import MovieForm from './components/MovieForm';
 
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Dashboard from './components/Dashboard';
 
@@ -8,6 +8,7 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Dashboard />} />
+        <Route path="/movieForm" element={<MovieForm />} />
       </Routes>
     </Router>
   );

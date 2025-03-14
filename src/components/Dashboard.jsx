@@ -1,13 +1,15 @@
 // src/components/Dashboard.jsx
-
-import React, { useState } from 'react';
+import { useState } from 'react';
 import MovieCard from './MovieCard';
 import { useNavigate } from 'react-router-dom';
 import './Dashboard.css'; // Optional: Import CSS for styling
 
 const Dashboard = () => {
   const navigate = useNavigate();
-
+ 
+  const handleAdd = () =>{
+    navigate('/movieForm')
+  }
   // Sample movie data. In a real application, this might come from an API or global state.
   const [movies, setMovies] = useState([
     {
@@ -34,6 +36,7 @@ const Dashboard = () => {
   return (
     <div className="dashboard">
       <header className="dashboard-header">
+        <button className='h-[40px] w-[150px] bg-amber-600 rounded-2xl ml-[300px]'onClick={handleAdd}>add</button>
         <h1>Movie Collection</h1>
       </header>
       <div className="movie-list">
